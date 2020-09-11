@@ -60,5 +60,6 @@ public class EarlyAlarm {
 
         //Ending program
         System.out.println("Good night!");
+        System.exit(0);
     }
 }
