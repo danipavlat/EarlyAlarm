@@ -40,10 +40,20 @@ public class EarlyAlarm {
         //Calculate time - 45 minutes
         //Minute check: does hour roll back?
         if (minutes < 45) {
+
             int minutesUnderHour = 45 - minutes;
             minutes = 60 - minutesUnderHour;
-            hour = hour - 1;
+
+            //if input time is midnight
+            if (hour == 0) {
+                hour = 23;
+            } else {
+                //if input is not midnight
+                hour = hour - 1;
+            }
+
         } else {
+            //if hour does not roll back
             minutes = 60 - minutes;
         }
 
